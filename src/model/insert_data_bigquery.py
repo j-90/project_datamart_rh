@@ -7,14 +7,14 @@ from pandas_gbq import to_gbq
 
 def insert_data(dim_funcionarios, dim_escritorios, dim_cidades, dim_cargos, dim_area, dim_nivel, dim_desempenho, dim_remuneracao, dim_emprego):
     # Especificando o caminho onde as credenciais, no arquivo json, estão armazenadas
-    credencial_path = r'D:\Projeto\ETL_Python\ETL_RH\dm-rh-457714-9a2edc8453de.json'
+    credencial_path = r'seu_caminho_para_as_credenciais.json'
     
     # Carregando as credenciais
     credentials = service_account.Credentials.from_service_account_file(credencial_path)
     
     # Definindo o ID do projeto e dataset
-    projeto = "dm-rh-457714"
-    dataset = "DM_RH"
+    projeto = "INSIRA O ID DO SEU PROJETO NO GOOGLE BIGQUERY AQUI"
+    dataset = "INSIRA O NOME DO DATASET NO GOOGLE BIGQUERY AQUI"
     
     # Inserindo dados em cada tabela do BigQuery
     # dim_funcionarios.to_gbq(f'{dataset}.dim_funcionarios', project_id=projeto, if_exists='append', credentials=credentials)
@@ -44,9 +44,3 @@ def insert_data(dim_funcionarios, dim_escritorios, dim_cidades, dim_cargos, dim_
     # dim_emprego.to_gbq(f'{dataset}.dim_emprego', project_id=projeto, if_exists='append', credentials=credentials)
     dim_emprego.to_gbq(f'{dataset}.dim_emprego', project_id=projeto, if_exists='replace', credentials=credentials)
 
-
-# if __name__ == "__main__":
-#     df = transform_data()
-#     dim_funcionarios, dim_escritorios, dim_cidades, dim_cargos, dim_area, dim_nivel, dim_desempenho, dim_remuneracao, dim_emprego = split(df)
-#     insert_data(dim_funcionarios, dim_escritorios, dim_cidades, dim_cargos, dim_area, dim_nivel, dim_desempenho, dim_remuneracao, dim_emprego)
-    
