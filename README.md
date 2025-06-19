@@ -35,7 +35,7 @@ ETL_RH/
 └── README.md                        # Este arquivo
 ```
 
-**Nota**: O arquivo de credenciais do Google BigQuery (`*.json`) não deve ser incluído neste repositório por razões de segurança. Configure-o localmente conforme descrito na seção "Pré-requisitos".
+**Nota**: O arquivo de credenciais do Google BigQuery (`*.json`) não foi incluído neste repositório por razões de segurança. Configure-o localmente conforme descrito na seção "Pré-requisitos".
 
 ## Pré-requisitos
 
@@ -48,12 +48,8 @@ pip install pandas google-cloud-bigquery pandas-gbq unidecode
 ### Configuração do Google BigQuery
 1. Crie um projeto no Google Cloud e ative a API BigQuery.
 2. Gere um arquivo de credenciais JSON no Google Cloud Console e salve-o localmente (ex.: `credentials.json`).
-3. Configure a variável de ambiente `GOOGLE_APPLICATION_CREDENTIALS` para o caminho do arquivo JSON antes de executar o script:
-   ```bash
-   set GOOGLE_APPLICATION_CREDENTIALS=caminho/para/seu/credentials.json  # Windows
-   export GOOGLE_APPLICATION_CREDENTIALS=caminho/para/seu/credentials.json  # Linux/Mac
-   ```
-4. Ajuste o código em `insert_data_bigquery.py` para usar a variável de ambiente, se necessário (veja a seção "Contribuindo" para detalhes).
+3. Insira o arquivo JSON gerado na pasta contendo o arquivo principal de execução do script.
+4. Ajuste o código em `insert_data_bigquery.py` para usar o arquivo.
 
 ## Como Executar o Projeto
 
@@ -77,8 +73,10 @@ O script processará o arquivo `BaseFuncionarios.xlsx`, transformará os dados e
 ## Funcionalidades
 
 - **Transformação de Dados**: 
-  - Corrige IDs, separa endereços em componentes (bairro, cidade, estado, CEP).
+  - Corrige IDs dos funcionários, separa endereços em componentes (bairro, cidade, estado, CEP).
   - Ajusta sexo e estado civil com base em regras específicas.
+  - Insere o status de atividade do funcionário com base na existência de uma data de demissão.
+  - Remove a coluna de imagens.
   - Remove acentos e padroniza nomes de colunas.
 - **Divisão em Dimensões**: 
   - Cria dimensões como funcionários, escritórios, cidades, cargos, área, nível, desempenho, remuneração e emprego.
@@ -131,13 +129,13 @@ Este projeto está sob a licença [MIT](LICENSE) (adicione um arquivo LICENSE se
 
 ## Contato
 
-- **Autor**: [Seu Nome ou Usuário do GitHub](https://github.com/seu-usuario)
-- **Email**: seu-email@example.com (opcional)
-- **Data de Criação**: 07/06/2025 às 11:08 AM -03
+- **Autor**: [Jeferson Andrade - j-90](https://github.com/j-90)
+- **Email**: jandrademelo90@gmail.com
+- **Data de Criação**: 19/06/2025 às 00:04 AM -03
 
 ## Histórico de Versões
 
-- **v1.0.0** (07/06/2025): Versão inicial com pipeline ETL funcional.
+- **v1.0.0** (19/06/2025): Versão inicial com pipeline ETL funcional.
 
 ## Notas Adicionais
 
@@ -154,41 +152,3 @@ Este projeto está sob a licença [MIT](LICENSE) (adicione um arquivo LICENSE se
 - [pandas-gbq](https://pandas-gbq.readthedocs.io/)
 - [unidecode](https://pypi.org/project/Unidecode/)
 ```
-
----
-
-### Instruções para Uso no GitHub
-1. **Crie o Arquivo**:
-   - Copie o conteúdo acima e salve como `README.md` na raiz do diretório `ETL_RH`.
-
-2. **Adicione ao Repositório**:
-   - Certifique-se de que `dm-rh-457714-92e2dc843d3e.json` está no `.gitignore` (ex.: adicione `*.json` se ainda não estiver lá).
-   - Commit e envie ao GitHub:
-     ```bash
-     cd d:\Projeto\ETL_Python\ETL_RH
-     git add README.md
-     git commit -m "Adicionando README detalhado"
-     git push origin main
-     ```
-
-3. **Ajustes no Código**:
-   - Atualize `insert_data_bigquery.py` para usar a variável de ambiente, conforme sugerido na seção "Contribuindo".
-   - Substitua `"dm-rh-457714"` pelo seu ID de projeto real no código, se necessário.
-
-4. **Imagens (Opcional)**:
-   - Se desejar adicionar as imagens sugeridas anteriormente (`project_structure.png`, `bigquery_result.png`, `sample_excel.png`), siga as instruções que forneci e insira-as no README com:
-     ```markdown
-     ![Estrutura do Projeto](project_structure.png)
-     ![Resultado no BigQuery](bigquery_result.png)
-     ![Exemplo de Dados do Excel](sample_excel.png)
-     ```
-   - Certifique-se de que as imagens não exponham dados sensíveis.
-
----
-
-### Observações de Segurança
-- O README não menciona caminhos ou nomes específicos de credenciais, mantendo a segurança.
-- Instruções genéricas guiam os usuários a configurar suas próprias credenciais localmente.
-- Adicione um arquivo `LICENSE` com a licença MIT, se desejar, para formalizar a distribuição.
-
-Se precisar de ajuda para ajustar o código, adicionar imagens ou subir o repositório, é só me chamar!
