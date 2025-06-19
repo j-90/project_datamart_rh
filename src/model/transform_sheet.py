@@ -64,13 +64,6 @@ def transform_data():
     for col in df_rh.columns:
         if col in df_rh.columns and df_rh[col].dtype in ['float64', 'int64']:
             df_rh[col] = df_rh[col].round(2)
-
-    # Salvando em um novo arquivo xlsx
-    # df_rh.to_excel(r'D:\Projeto\ETL_Python\ETL_RH\BaseFuncionarios_final.xlsx', index=False)
-    # print('Arquivo final criado.')
     
     return df_rh
 
-# if __name__ == "__main__":
-#     transform_data()
-        
