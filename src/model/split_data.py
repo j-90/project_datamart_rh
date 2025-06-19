@@ -9,7 +9,7 @@ def split(df_rh):
     # Criando a dimensão de funcionários
     dim_funcionarios = df_rh[['id_funcionario', 'nome_completo', 'estado_civil', 'sexo', 'data_de_nascimento']].copy()
     
-    # ------------------------------------------------------------------------------------------------------------------------------
+    #----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------    
     
     # Criando a dimensão de escritórios
     dim_escritorios = df_rh[['endereco', 'complemento', 'bairro']].copy()
@@ -85,9 +85,4 @@ def split(df_rh):
     dim_emprego = dim_emprego[['id_funcionario', 'data_de_contratacao', 'data_de_demissao', 'status', 'ferias_acumuladas', 'horas_extras', 'id_cargo', 'id_escritorio']].drop_duplicates()
     
     return dim_funcionarios, dim_escritorios, dim_cidades, dim_cargos, dim_area, dim_nivel, dim_desempenho, dim_remuneracao, dim_emprego
-
-# if __name__ == "__main__":
-#     df = transform_data()
-#     split(df)
-#     # print_columns(df)
 
