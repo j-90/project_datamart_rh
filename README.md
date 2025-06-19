@@ -96,15 +96,6 @@ O script processará o arquivo `BaseFuncionarios.xlsx`, transformará os dados e
   - `dim_remuneracao`
   - `dim_emprego`
 
-## Contribuindo
-
-Sinta-se à vontade para contribuir! Siga estas etapas:
-1. Faça um fork do repositório.
-2. Crie uma branch para sua feature: `git checkout -b feature/nova-funcionalidade`.
-3. Commit suas alterações: `git commit -m "Descrição da mudança"`.
-4. Envie para o repositório: `git push origin feature/nova-funcionalidade`.
-5. Abra um Pull Request.
-
 ### Ajustes no Código
 - Para usar variáveis de ambiente no lugar de caminhos fixos em `insert_data_bigquery.py`, modifique a função `insert_data` para:
   ```python
