@@ -15,8 +15,7 @@ O ETL_RH foi desenvolvido para automatizar a transformação e o carregamento de
 ## Estrutura do Projeto
 
 
-![image](https://github.com/user-attachments/assets/9c9644bf-af49-44d6-8f78-cb403af4fda8)
-
+![image](https://github.com/user-attachments/assets/b4862b3d-60a3-450b-ae63-ad36cb76c333)
 
 
 **Nota: O arquivo de credenciais do Google BigQuery (`*.json`) não foi incluído neste repositório por razões de segurança. Configure-o localmente conforme descrito na seção "Pré-requisitos".**
