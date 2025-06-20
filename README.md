@@ -97,10 +97,6 @@ O script processará o arquivo `BaseFuncionarios.xlsx`, transformará os dados e
   ```
 - Ajuste o `projeto` no código para corresponder ao seu ID de projeto no Google Cloud.
 
-## Licença
-
-Este projeto está sob a licença [MIT](LICENSE) (adicione um arquivo LICENSE se aplicável).
-
 ## Contato
 
 - **Autor**: [Jeferson Andrade - j-90](https://github.com/j-90)
