@@ -15,24 +15,8 @@ O ETL_RH foi desenvolvido para automatizar a transformação e o carregamento de
 ## Estrutura do Projeto
 
 
-ETL_RH/
-├── .vscode/                         ## Configurações do VS Code
-├── src/                             ## Diretório principal do código
-│   ├── controller/                  ## Lógica de controle do pipeline
-│   │   └── projeto_rh.py            ## Orquestra o pipeline ETL
-│   ├── model/                       ## Modelos de transformação e carregamento
-│   │   ├── insert_data_bigquery.py  ## Carrega dados no BigQuery
-│   │   ├── split_data.py            ## Divide dados em dimensões
-│   │   ├── test_data.py             ## Testes (opcional)
-│   │   ├── transform_sheet.py       ## Transforma dados do Excel
-│   │   └── __init__.py              ## Inicializa o pacote model
-│   └── view/                        ## Interface ou visualização (atualmente com init.py)
-│       └── __init__.py              ## Inicializa o pacote view
-├── BaseFuncionarios.xlsx            ## Arquivo de origem com dados de funcionários
-├── BaseFuncionarios_final.xlsx      ## Arquivo de saída (opcional, comentado)
-├── executa_etl_rh.py                ## Script principal para executar o pipeline
-├── .gitignore                       ## Arquivos ignorados pelo Git
-└── README.md                        ## Este arquivo
+![image](https://github.com/user-attachments/assets/9c9644bf-af49-44d6-8f78-cb403af4fda8)
+
 
 
 **Nota: O arquivo de credenciais do Google BigQuery (`*.json`) não foi incluído neste repositório por razões de segurança. Configure-o localmente conforme descrito na seção "Pré-requisitos".**
