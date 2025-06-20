@@ -1,18 +1,18 @@
 ---
 
 ```markdown
-# ETL_RH - Pipeline de Extração, Transformação e Carregamento de Dados de Recursos Humanos
+ETL_RH - Pipeline de Extração, Transformação e Carregamento de Dados de Recursos Humanos
 
 Este repositório contém um projeto Python que implementa um pipeline ETL (Extract, Transform, Load) para processar dados de recursos humanos a partir de uma planilha Excel e carregá-los em um banco de dados no Google BigQuery. O projeto organiza os dados em dimensões para análise eficiente, como funcionários, escritórios, cargos e desempenho.
 
-## Descrição do Projeto
+Descrição do Projeto
 
 O ETL_RH foi desenvolvido para automatizar a transformação e o carregamento de dados de uma base de funcionários em um formato estruturado, adequado para análise de dados. O pipeline realiza as seguintes etapas:
-- **Extração**: Lê dados de uma planilha Excel (`BaseFuncionarios.xlsx`).
-- **Transformação**: Ajusta colunas, corrige dados, cria IDs únicos e separa informações como endereços em dimensões (bairro, cidade, estado, etc.).
-- **Carregamento**: Insere os dados transformados em tabelas no Google BigQuery para armazenamento e análise.
+- Extração: Lê dados de uma planilha Excel (`BaseFuncionarios.xlsx`).
+- Transformação: Ajusta colunas, corrige dados, cria IDs únicos e separa informações como endereços em dimensões (bairro, cidade, estado, etc.).
+- Carregamento: Insere os dados transformados em tabelas no Google BigQuery para armazenamento e análise.
 
-## Estrutura do Projeto
+Estrutura do Projeto
 
 ```
 ETL_RH/
@@ -35,9 +35,9 @@ ETL_RH/
 └── README.md                        # Este arquivo
 ```
 
-**Nota**: O arquivo de credenciais do Google BigQuery (`*.json`) não foi incluído neste repositório por razões de segurança. Configure-o localmente conforme descrito na seção "Pré-requisitos".
+Nota: O arquivo de credenciais do Google BigQuery (`*.json`) não foi incluído neste repositório por razões de segurança. Configure-o localmente conforme descrito na seção "Pré-requisitos".
 
-## Pré-requisitos
+Pré-requisitos
 
 Antes de executar o projeto, instale as dependências necessárias:
 
