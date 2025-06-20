@@ -1,6 +1,6 @@
 ---
 
-```markdown
+
 ETL_RH - Pipeline de Extração, Transformação e Carregamento de Dados de Recursos Humanos
 
 Este repositório contém um projeto Python que implementa um pipeline ETL (Extract, Transform, Load) para processar dados de recursos humanos a partir de uma planilha Excel e carregá-los em um banco de dados no Google BigQuery. O projeto organiza os dados em dimensões para análise eficiente, como funcionários, escritórios, cargos e desempenho.
@@ -14,7 +14,7 @@ O ETL_RH foi desenvolvido para automatizar a transformação e o carregamento de
 
 Estrutura do Projeto
 
-```
+
 ETL_RH/
 ├── .vscode/                         # Configurações do VS Code
 ├── src/                             # Diretório principal do código
@@ -33,7 +33,7 @@ ETL_RH/
 ├── executa_etl_rh.py                # Script principal para executar o pipeline
 ├── .gitignore                       # Arquivos ignorados pelo Git
 └── README.md                        # Este arquivo
-```
+
 
 Nota: O arquivo de credenciais do Google BigQuery (`*.json`) não foi incluído neste repositório por razões de segurança. Configure-o localmente conforme descrito na seção "Pré-requisitos".
 
