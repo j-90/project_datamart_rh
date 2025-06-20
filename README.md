@@ -35,7 +35,7 @@ ETL_RH/
 └── README.md                        ## Este arquivo
 
 
-**Nota: O arquivo de credenciais do Google BigQuery (`*.json`) não foi incluído neste repositório por razões de segurança. Configure-o localmente conforme descrito na seção "Pré-requisitos".
+**Nota: O arquivo de credenciais do Google BigQuery (`*.json`) não foi incluído neste repositório por razões de segurança. Configure-o localmente conforme descrito na seção "Pré-requisitos".**
 
 ## Pré-requisitos
 
