@@ -99,7 +99,7 @@ O script processará o arquivo `BaseFuncionarios.xlsx`, transformará os dados e
 
 ## Contato
 
-- **Autor**: [Jeferson Andrade - j-90](https://github.com/j-90)
+- **Autor**: [Jeferson Andrade | j-90](https://github.com/j-90)
 - **LinkedIn**: https://www.linkedin.com/in/jeferson-andrade90/
 - **Email**: jandrademelo90@gmail.com
 - **Data de Criação**: 19/06/2025 às 00:04 AM -03
