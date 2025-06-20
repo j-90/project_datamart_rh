@@ -1,43 +1,43 @@
 ---
 
 
-ETL_RH - Pipeline de Extração, Transformação e Carregamento de Dados de Recursos Humanos
+## ETL_RH - Pipeline de Extração, Transformação e Carregamento de Dados de Recursos Humanos
 
 Este repositório contém um projeto Python que implementa um pipeline ETL (Extract, Transform, Load) para processar dados de recursos humanos a partir de uma planilha Excel e carregá-los em um banco de dados no Google BigQuery. O projeto organiza os dados em dimensões para análise eficiente, como funcionários, escritórios, cargos e desempenho.
 
-Descrição do Projeto
+## Descrição do Projeto
 
 O ETL_RH foi desenvolvido para automatizar a transformação e o carregamento de dados de uma base de funcionários em um formato estruturado, adequado para análise de dados. O pipeline realiza as seguintes etapas:
 - Extração: Lê dados de uma planilha Excel (`BaseFuncionarios.xlsx`).
 - Transformação: Ajusta colunas, corrige dados, cria IDs únicos e separa informações como endereços em dimensões (bairro, cidade, estado, etc.).
 - Carregamento: Insere os dados transformados em tabelas no Google BigQuery para armazenamento e análise.
 
-Estrutura do Projeto
+## Estrutura do Projeto
 
 
 ETL_RH/
-├── .vscode/                         # Configurações do VS Code
-├── src/                             # Diretório principal do código
-│   ├── controller/                  # Lógica de controle do pipeline
-│   │   └── projeto_rh.py            # Orquestra o pipeline ETL
-│   ├── model/                       # Modelos de transformação e carregamento
-│   │   ├── insert_data_bigquery.py  # Carrega dados no BigQuery
-│   │   ├── split_data.py            # Divide dados em dimensões
-│   │   ├── test_data.py             # Testes (opcional)
-│   │   ├── transform_sheet.py       # Transforma dados do Excel
-│   │   └── __init__.py              # Inicializa o pacote model
-│   └── view/                        # Interface ou visualização (atualmente com init.py)
-│       └── __init__.py              # Inicializa o pacote view
-├── BaseFuncionarios.xlsx            # Arquivo de origem com dados de funcionários
-├── BaseFuncionarios_final.xlsx      # Arquivo de saída (opcional, comentado)
-├── executa_etl_rh.py                # Script principal para executar o pipeline
-├── .gitignore                       # Arquivos ignorados pelo Git
-└── README.md                        # Este arquivo
+├── .vscode/                         ## Configurações do VS Code
+├── src/                             ## Diretório principal do código
+│   ├── controller/                  ## Lógica de controle do pipeline
+│   │   └── projeto_rh.py            ## Orquestra o pipeline ETL
+│   ├── model/                       ## Modelos de transformação e carregamento
+│   │   ├── insert_data_bigquery.py  ## Carrega dados no BigQuery
+│   │   ├── split_data.py            ## Divide dados em dimensões
+│   │   ├── test_data.py             ## Testes (opcional)
+│   │   ├── transform_sheet.py       ## Transforma dados do Excel
+│   │   └── __init__.py              ## Inicializa o pacote model
+│   └── view/                        ## Interface ou visualização (atualmente com init.py)
+│       └── __init__.py              ## Inicializa o pacote view
+├── BaseFuncionarios.xlsx            ## Arquivo de origem com dados de funcionários
+├── BaseFuncionarios_final.xlsx      ## Arquivo de saída (opcional, comentado)
+├── executa_etl_rh.py                ## Script principal para executar o pipeline
+├── .gitignore                       ## Arquivos ignorados pelo Git
+└── README.md                        ## Este arquivo
 
 
-Nota: O arquivo de credenciais do Google BigQuery (`*.json`) não foi incluído neste repositório por razões de segurança. Configure-o localmente conforme descrito na seção "Pré-requisitos".
+## Nota: O arquivo de credenciais do Google BigQuery (`*.json`) não foi incluído neste repositório por razões de segurança. Configure-o localmente conforme descrito na seção "Pré-requisitos".
 
-Pré-requisitos
+## Pré-requisitos
 
 Antes de executar o projeto, instale as dependências necessárias:
 
